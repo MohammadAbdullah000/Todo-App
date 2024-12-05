@@ -1,173 +1,155 @@
 ul {
     list-style-type: none;
-    
-  }
- 
-
-  .line-through {
+}
+.line-through {
     text-decoration: line-through;
     color: gray;
 }
-
 .rubik {
     font-family: "Rubik", sans-serif;
     font-optical-sizing: auto;
     font-weight: 400;
     font-style: normal;
-  }
-  
-*{
-    padding: 0;margin: 0;box-sizing: border-box;
 }
-body{
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body {
     height: 100vh;
     display: flex;
     flex-direction: column;
-background-color: antiquewhite;
+    background-color: antiquewhite;
     align-items: center;
-    
 }
 
-.wrapper{
+.wrapper {
     padding: 50px;
     margin-top: 30px;
     background-color: aliceblue;
     box-shadow: 5px 5px rgb(156, 156, 156);
-    
+    width: 90%; /* Adjust width for smaller screens */
+    max-width: 700px; /* Restrict maximum width */
 }
-.wrapper h1{
+.wrapper h1 {
     text-align: center;
     margin-block: 10px;
     color: rgb(75, 75, 75);
-
 }
-form{
+form {
     display: flex;
     gap: 10px;
+    flex-wrap: wrap; /* Enable wrapping for smaller screens */
 }
-form input{
+form input {
     padding: 10px;
-    max-width: 600px;
-    width: 100%;
+    flex: 1; /* Allow input to grow and shrink */
     box-shadow: 3px 3px rgb(156, 156, 156);
-
-    border: none;font-size: 20px;
-    
-}
-
-/* Style for Filter buttons */
-.filter-buttons button:nth-child(1), 
-.filter-buttons button:nth-child(2), 
-.filter-buttons button:nth-child(3) {
-    margin-inline: 5px;
-    font-size: 15px;
-    padding-inline: 10px;
-    padding-block: 5px;
-    background-color: bisque;
     border: none;
-    box-shadow: 2px 2px gray;
-    transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+    font-size: 18px; /* Adjust font size */
+    min-width: 200px;
 }
-
-/* Style for active Filter button */
-.filter-buttons button.active {
-    background-color: #015bfa;
-    transform: translate(5px, 5px); 
-}
-
-/* Add animation for active state (when clicked) */
-.filter-buttons button:active {
-    position: relative; 
-    transform: translate(5px, 5px); 
-    box-shadow: none; 
-}
-
-/* Styles for inactive state (normal) */
-.filter-buttons button {
-    background-color: bisque;
-    color: black;
-}
-
-/* When filter is active */
-.filter-buttons button.active {
-    transform: translate(0px, 0px); 
-    background-color: rgb(234, 121, 8);
-    color: white;
-}
-
-
-form button,
-.todo .delete-button {
+form button {
+    padding: 10px;
+    font-size: 18px;
     box-shadow: 3px 3px rgb(156, 156, 156);
-
-    transition: transform 0.3s ease, box-shadow 0.3s ease; 
-}
-/* Style for Add and Delete buttons when clicked */
-form button:active, 
-.todo .delete-button:active {
-    position: relative;
-    transform: translate(5px, 5px); 
-    
-    box-shadow: none;
-}
-
-form button{
-    box-shadow: 3px 3px rgb(156, 156, 156);
-
     border: none;
-    padding:5px;
-    font-size: 20px;
-    
 }
-.filter-buttons{
+.filter-buttons {
     padding: 20px;
     text-align: center;
 }
-.filter-buttons button:nth-child(1),.filter-buttons button:nth-child(2),.filter-buttons button:nth-child(3){
+.filter-buttons button {
     margin-inline: 5px;
     font-size: 15px;
     padding-inline: 10px;
     padding-block: 5px;
-
     border: none;
-    
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
 }
-.todo{
-    display: flex;min-width: 650px;
+.filter-buttons button.active {
+    background-color: rgb(234, 121, 8);
+
+    color: white;
+}
+.todo {
+    display: flex;
     justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    min-width: 100%; /* Ensure it adjusts on smaller screens */
     background-color: #abfa01;
     box-shadow: 5px 5px rgb(156, 156, 156);
-
+    flex-wrap: wrap; /* Enable wrapping for smaller screens */
+    gap: 10px;
 }
-.two{
+.two {
     display: flex;
-    gap: 20px;
+    gap: 10px;
+    align-items: center;
+    flex-wrap: wrap; /* Allow wrapping */
+}
+.todo label {
+    font-size: 18px;
+    word-wrap: break-word; /* Prevent label text from overflowing */
 }
 .todo input[type="checkbox"] {
     width: 20px;
     height: 20px;
     cursor: pointer;
 }
-
-/* Style checked checkboxes */
-.todo input[type="checkbox"]:checked {
-    background-color: #015bfa;
-    border: 2px solid #015bfa;
-}
-.todo .delete-button{
+.todo .delete-button {
     font-size: 15px;
     padding: 5px;
-    box-shadow: 3px 3px rgb(156, 156, 156);
-
-    border: none;
     color: red;
+    border: none;
+    background: none;
 }
-.todo label{
-    font-size: 20px;
+@media (max-width: 768px) {
+    .wrapper {
+        padding: 20px;
+        margin-top: 20px;
+    }
+    form input {
+        font-size: 16px;
+        padding: 8px;
+    }
+    form button {
+        font-size: 16px;
+        padding: 8px;
+    }
+    .todo {
+        flex-direction: column; /* Stack items vertically */
+        align-items: flex-start;
+    }
+    .two {
+        flex-direction: row; /* Retain horizontal alignment for text and checkbox */
+    }
 }
-
-@media (max-width:450px) {
-    .wrapper{
+@media (max-width: 450px) {
+    .wrapper {
         padding: 10px;
+    }
+    form input {
+        font-size: 14px;
+        padding: 6px;
+    }
+    form button {
+        font-size: 14px;
+        padding: 6px;
+    }
+    .todo {
+        font-size: 14px;
+    }
+    .todo label {
+        font-size: 14px;
+    }
+    .filter-buttons {
+        font-size: 14px;
+    }
+    .filter-buttons button {
+        font-size: 12px;
+        padding: 5px;
     }
 }
