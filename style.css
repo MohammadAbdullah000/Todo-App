@@ -1,0 +1,166 @@
+ul {
+    list-style-type: none;
+    
+  }
+ 
+
+  .line-through {
+    text-decoration: line-through;
+    color: gray;
+}
+
+.rubik {
+    font-family: "Rubik", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+  }
+  
+*{
+    padding: 0;margin: 0;box-sizing: border-box;
+}
+body{
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+background-color: antiquewhite;
+    align-items: center;
+    
+}
+
+.wrapper{
+    padding: 50px;
+    margin-top: 30px;
+    background-color: aliceblue;
+    box-shadow: 5px 5px rgb(156, 156, 156);
+    
+}
+.wrapper h1{
+    text-align: center;
+    margin-block: 10px;
+    color: rgb(75, 75, 75);
+
+}
+form{
+    display: flex;
+    gap: 10px;
+}
+form input{
+    padding: 10px;
+    min-width: 600px;
+    box-shadow: 3px 3px rgb(156, 156, 156);
+
+    border: none;font-size: 20px;
+    
+}
+
+/* Style for Filter buttons */
+.filter-buttons button:nth-child(1), 
+.filter-buttons button:nth-child(2), 
+.filter-buttons button:nth-child(3) {
+    margin-inline: 5px;
+    font-size: 15px;
+    padding-inline: 10px;
+    padding-block: 5px;
+    background-color: bisque;
+    border: none;
+    box-shadow: 2px 2px gray;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+}
+
+/* Style for active Filter button */
+.filter-buttons button.active {
+    background-color: #015bfa;
+    transform: translate(5px, 5px); 
+}
+
+/* Add animation for active state (when clicked) */
+.filter-buttons button:active {
+    position: relative; 
+    transform: translate(5px, 5px); 
+    box-shadow: none; 
+}
+
+/* Styles for inactive state (normal) */
+.filter-buttons button {
+    background-color: bisque;
+    color: black;
+}
+
+/* When filter is active */
+.filter-buttons button.active {
+    transform: translate(0px, 0px); 
+    background-color: rgb(234, 121, 8);
+    color: white;
+}
+
+
+form button,
+.todo .delete-button {
+    box-shadow: 3px 3px rgb(156, 156, 156);
+
+    transition: transform 0.3s ease, box-shadow 0.3s ease; 
+}
+/* Style for Add and Delete buttons when clicked */
+form button:active, 
+.todo .delete-button:active {
+    position: relative;
+    transform: translate(5px, 5px); 
+    
+    box-shadow: none;
+}
+
+form button{
+    box-shadow: 3px 3px rgb(156, 156, 156);
+
+    border: none;
+    padding:5px;
+    font-size: 20px;
+    
+}
+.filter-buttons{
+    padding: 20px;
+    text-align: center;
+}
+.filter-buttons button:nth-child(1),.filter-buttons button:nth-child(2),.filter-buttons button:nth-child(3){
+    margin-inline: 5px;
+    font-size: 15px;
+    padding-inline: 10px;
+    padding-block: 5px;
+
+    border: none;
+    
+}
+.todo{
+    display: flex;min-width: 650px;
+    justify-content: space-between;
+    background-color: #abfa01;
+    box-shadow: 5px 5px rgb(156, 156, 156);
+
+}
+.two{
+    display: flex;
+    gap: 20px;
+}
+.todo input[type="checkbox"] {
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+}
+
+/* Style checked checkboxes */
+.todo input[type="checkbox"]:checked {
+    background-color: #015bfa;
+    border: 2px solid #015bfa;
+}
+.todo .delete-button{
+    font-size: 15px;
+    padding: 5px;
+    box-shadow: 3px 3px rgb(156, 156, 156);
+
+    border: none;
+    color: red;
+}
+.todo label{
+    font-size: 20px;
+}
