@@ -78,10 +78,10 @@ form button {
     justify-content: space-between;
     align-items: center;
     padding: 10px;
-    min-width: 100%; /* Ensure it adjusts on smaller screens */
+    min-width: 100%; 
     background-color: #abfa01;
     box-shadow: 5px 5px rgb(156, 156, 156);
-    flex-wrap: wrap; /* Enable wrapping for smaller screens */
+    flex-wrap: wrap; 
     gap: 10px;
 }
 .two {
@@ -120,11 +120,11 @@ form button {
         padding: 8px;
     }
     .todo {
-        flex-direction: column; /* Stack items vertically */
+        flex-direction: column; 
         align-items: flex-start;
     }
     .two {
-        flex-direction: row; /* Retain horizontal alignment for text and checkbox */
+        flex-direction: row;
     }
 }
 @media (max-width: 450px) {
