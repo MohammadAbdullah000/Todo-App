@@ -47,7 +47,8 @@ form{
 }
 form input{
     padding: 10px;
-    min-width: 600px;
+    max-width: 600px;
+    width: 100%;
     box-shadow: 3px 3px rgb(156, 156, 156);
 
     border: none;font-size: 20px;
@@ -163,4 +164,10 @@ form button{
 }
 .todo label{
     font-size: 20px;
+}
+
+@media (max-width:450px) {
+    .wrapper{
+        padding: 10px;
+    }
 }
